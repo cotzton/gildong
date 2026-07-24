@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>길동이의 코딩 일기</title>
+    <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>길동이의 코딩 일기</h1>
+        <nav>
+            <button id="nav-home">홈 (일기쓰기)</button>
+            <button id="nav-list">목록</button>
+        </nav>
+        <!-- 부가 기능 버튼 -->
+        <div class="controls">
+            <button id="dark-mode-toggle">🌙 다크모드</button>
+            <button id="font-increase">A+ (글자 확대)</button>
+            <button id="font-decrease">A- (글자 축소)</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. 일기 쓰기 영역 -->
+        <section id="write-section">
+            <h2>새 일기 작성</h2>
+            <input type="text" id="diary-title" placeholder="제목을 입력하세요">
+            <textarea id="diary-content" rows="10" placeholder="오늘 배운 내용을 기록해 보세요..."></textarea>
+            <button id="save-btn">저장하기</button>
+        </section>
+
+        <!-- 2. 일기 목록 영역 (기본적으로 숨김 처리) -->
+        <section id="list-section" class="hidden">
+            <h2>일기 목록</h2>
+            <ul id="diary-list">
+                <!-- 저장된 일기 목록이 여기에 표시됩니다 -->
+            </ul>
+        </section>
+
+        <!-- 3. 일기 상세 보기 영역 (기본적으로 숨김 처리) -->
+        <section id="view-section" class="hidden">
+            <h2 id="view-title"></h2>
+            <p id="view-content"></p>
+            <button id="back-to-list-btn">목록으로 돌아가기</button>
+        </section>
+    </main>
+
+    <!-- JavaScript 파일 연결 -->
+    <script src="script.js"></script>
+</body>
+</html>
